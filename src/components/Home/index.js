@@ -8,8 +8,8 @@ import Loader from 'react-loaders';
 
 const Home = () => {
     const[letterClass, setLetterClass] = useState('text-animate')
-    const nameArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n']
-    const jobArray = ['w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
+    const nameArray = ['o', 'y', ' ', 'J', 'h', 'o', 'n',' ', 'A', 'n','d', 'e', 'r','s', 'o', 'n']
+    const jobArray = ['D', 'e', 's', 'a', 'r', 'o', 'l', 'l', 'a', 'd', 'o', 'r', ' ', 'W', 'e', 'b']
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -25,10 +25,13 @@ const Home = () => {
             <div className="text-zone">
                 <h1>
                     <span className={letterClass}>H</span>
-                    <span className={`${letterClass} _12`}>i,</span>
+                    <span className={`${letterClass} _12`}>o</span>
+                    <span className={`${letterClass} _13`}>l</span>
+                    <span className={`${letterClass} _14`}>a</span>
+                    <span className={`${letterClass} _15`}>!</span>
                     <br/>
-                    <span className={`${letterClass} _13`}>I</span>
-                    <span className={`${letterClass} _14`}>'m,</span>
+                    <span className={`${letterClass} _16`}>Y</span>
+                    <span className={`${letterClass} _17`}>o</span>
                 <img src={LogoTitle} alt="developer"/>
                 <AnimatedLetters letterClass={letterClass} strArray={nameArray}
                 idx={15}/>
@@ -37,7 +40,7 @@ const Home = () => {
                 idx={22}/>
                 </h1>
                 <h2>Frontend Developer / UI/UX Designer</h2>
-                <Link to="/contact" className="flat-button">CONTACT ME</Link>
+                <Link to="/contact" className="flat-button">Acerca de mi</Link>
             </div>
             <Logo />
         </div>
