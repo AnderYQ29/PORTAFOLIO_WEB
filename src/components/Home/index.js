@@ -37,10 +37,10 @@ const Home = () => {
                 idx={15}/>
                 <br/>
                 <AnimatedLetters letterClass={letterClass} strArray={jobArray}
-                idx={22}/>
+                idx={20}/>
                 </h1>
                 <h2>Frontend Developer / UI/UX Designer</h2>
-                <Link to="/contact" className="flat-button">Acerca de mi</Link>
+                <Link to="/about" className="flat-button">Acerca de mi</Link>
             </div>
             <Logo />
         </div>

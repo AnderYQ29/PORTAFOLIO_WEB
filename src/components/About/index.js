@@ -23,23 +23,24 @@ const About = () => {
                     <h1>
                         <AnimatedLetters
                             letterClass={letterClass}
-                            strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
+                            strArray={['C', 'o', 'n', 'ó', 'c', 'e', 'm', 'e', ' ', 'm', 'á', 's']}
                             idx={15}
                         />
                     </h1>
                     <p>
-                    I'm a very ambitious front-end developer looking for a role in an
-                    established IT company with the opportunity to work with the latest
-                    technologies on challenging and diverse projects.
+                    Soy un desarrollador web Frontend Junior y diseñador UX/UI enfocado en
+                    construir interfaces dinámicas, funcionales y atractivas. Busco formar
+                    parte de un equipo tecnológico donde pueda aportar en proyectos desafiantes
+                    y seguir fortaleciendo mis habilidades con las últimas tecnologías.
                     </p>
                     <p align="LEFT">
-                        I'm quiet confident, naturally curious, and perpetually working on
-                        improving my chops one design problem at a time.
+                        Especializado en JavaScript, React, Tailwind CSS, consumo de APIs RESTful
+                        y prototipado en Figma, con bases en Backend. Experiencia en control de versiones
+                        con Git/GitHub, documentación técnica y metodologías ágiles "Scrum".
                     </p>
                     <p>
-                        If I need to define myself in one sentence that would be a family
-                        person, father of a beautiful daughter, a sports fanatic,
-                        photography enthusiast, and tech-obsessed!!!
+                        En una frase: un desarrollador curioso, orientado a detalles y enfocado en
+                        resolver problemas de diseño con código limpio y eficiente.
                     </p>
                     </div>
                     <div className='stage-cube-cont'>

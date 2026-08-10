@@ -44,14 +44,14 @@ const Contact = () => {
                     <h1>
                         <AnimatedLetters
                             letterClass={letterClass}
-                            strArray={['C','o','n','t','a','c','t','','m','e']}
+                            strArray={['C','o','n','t','a','c','t','a','m','e']}
                             idx={15}
                         />
                     </h1>
                     <p>
-                        I am interested in freelance opportunities - especially on ambitious
-                        or large projects. However, if you have any other requests or
-                        questions, don't hesitate to contact me using below form either.
+                        Estoy abierto a proyectos freelance y nuevas oportunidades laborales.
+                        Si tienes alguna idea en mente, una propuesta o cualquier consulta, no
+                        dudes en escribirme a través del siguiente formulario.
                     </p>
                     <div className="contact-form">
                         <form ref={form} onSubmit={sendEmail}>
@@ -83,7 +83,7 @@ const Contact = () => {
                                     ></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" className="flat-button" value="SEND" />
+                                    <input type="submit" className="flat-button" value="ENVIAR" />
                                 </li>
                             </ul>
                         </form>
