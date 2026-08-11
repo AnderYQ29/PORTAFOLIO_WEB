@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import LogoTitle from '../../assets/images/logo-s.png';
+import FotoPerfil from '../../assets/images/fotoperfil.jpeg';
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from 'react';
-import Logo from './Logo';
 import Loader from 'react-loaders';
 
 const Home = () => {
@@ -42,7 +42,11 @@ const Home = () => {
                 <h2>Frontend Developer / UI/UX Designer</h2>
                 <Link to="/about" className="flat-button">Acerca de mi</Link>
             </div>
-            <Logo />
+
+            <div className="profile-photo-container">
+                <img src={FotoPerfil} alt="Foto de perfil" className="profile-photo" />
+            </div>
+            
         </div>
         <Loader type="pacman"/>
         </>
