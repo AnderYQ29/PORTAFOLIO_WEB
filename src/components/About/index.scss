@@ -52,6 +52,150 @@
     }
 }
 
+//Nuevo estilos agregados para el modal
+.projects-button {
+    margin-top: 24px;
+    border: 1px solid #ffd700;
+    padding: 12px 22px;
+    background: transparent;
+    color: #ffd700;
+    font-family: 'sans-serif';
+    font-size: 14px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.projects-button:hover {
+    background: #ffd700;
+    color: #0b1a24;
+}
+
+.projects-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container {
+    position: relative;
+    width: min(96%, 960px);
+    max-width: 960px;
+    max-height: 90vh;
+    margin: 40px auto;
+    padding: 32px;
+    background: #0b1a24;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.modal-container > .modal-body {
+    max-height: calc(90vh - 94px);
+    overflow-y: auto;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.modal-container > .modal-body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.modal-container > .modal-body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.modal-container h2 {
+    margin: 0 0 8px;
+    color: #ffd700;
+}
+
+.modal-container p {
+    margin: 0 0 24px;
+    color: #d1d1d1;
+    font-size: 14px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 145px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    border-color: #ffd700;
+    background: rgba(255, 217, 0, 0.08);
+}
+
+.project-card h3 {
+    margin: 0 0 10px;
+    color: #ffd700;
+    font-size: 16px;
+}
+
+.project-card p {
+    margin: 0 0 14px;
+    color: #d1d1d1;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.project-card span {
+    color: #fff;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+//Fin
+
 @keyframes spincube {
     from,
     to {

@@ -6,13 +6,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngular, faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons'
 
 const About = () => {
-    
-    const[letterClass, setLetterClass] = useState('text-animate')
+    const [letterClass, setLetterClass] = useState('text-animate')
+    //Modal (links de cada trabajo en el que estuve)
+    const [showModal, setShowModal] = useState(false)
+
+    const projects = [
+        {
+            title: 'Portafolio Profesional',
+            description: 'Presentacion de mis habilidades y proyectos frontend.',
+            url: 'https://tu-sitio-ejemplo.com/proyecto1'
+        },
+        {
+            title: 'E-commerce React',
+            description: 'Tienda con carrito y filtros de productos.',
+            url: 'https://tu-sitio-ejemplo.com/proyecto2'
+        },
+        {
+            title: 'Landing UI/UX',
+            description: 'Pantalla responsiva diseñada para conversiones.',
+            url: 'https://tu-sitio-ejemplo.com/proyecto3'
+        },
+        {
+            title: 'Dashboard Interactivo',
+            description: 'Visualizacion de datos con componentes React.',
+            url: 'https://tu-sitio-ejemplo.com/proyecto4'
+        },
+        {
+            title: 'Blog con API',
+            description: 'Publicaciones dinamicas consumiendo una API REST.',
+            url: 'https://tu-sitio-ejemplo.com/proyecto5'
+        }
+    ]
+//...
     useEffect(() => {
             const timer = setTimeout(() => {
                 setLetterClass('text-animate-hover')
             }, 3000)
-    
+
             return () => clearTimeout(timer)
     }, [])
 
@@ -42,9 +72,14 @@ const About = () => {
                         En una frase: un desarrollador curioso, orientado a detalles y enfocado en
                         resolver problemas de diseño con código limpio y eficiente.
                     </p>
-                    </div>
-                    <div className='stage-cube-cont'>
-                        <div className='cubespinner'>
+                    
+                    <button className='flat-button projects-button' onClick={() => setShowModal(true)}>
+                        Ver proyectos
+                    </button>
+
+                </div>
+                <div className='stage-cube-cont'>
+                    <div className='cubespinner'>
                             <div className='face1'>
                                 <FontAwesomeIcon icon={faAngular} color="#DD0031"/>
                             </div>
@@ -66,8 +101,39 @@ const About = () => {
                         </div>
                     </div>
 
-                
-            </div>
+                    {showModal && (
+                        <div className='projects-modal'>
+                            <div className='modal-overlay' onClick={() => setShowModal(false)} />
+                            <div className='modal-container'>
+                                <button className='modal-close' onClick={() => setShowModal(false)} aria-label='Cerrar modal'>
+                                    ×
+                                </button>
+                                <div className='modal-body'>
+                                    <h2>Proyectos destacados</h2>
+                                    <p>Haz clic en un proyecto para verlo en su página web.</p>
+                                    <div className='project-grid'>
+                                    {projects.map((project, index) => (
+                                        <a
+                                            key={index}
+                                            className='project-card'
+                                            href={project.url}
+                                            target='_blank'
+                                            rel='noreferrer'
+                                        >
+                                            <h3>{project.title}</h3>
+                                            <p>{project.description}</p>
+                                            <span>Ver proyecto</span>
+                                        </a>
+                                    ))}
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    
+                </div>
+            
             <Loader type="pacman" />
         </>
     )
