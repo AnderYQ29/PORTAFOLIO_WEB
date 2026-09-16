@@ -8,7 +8,8 @@ import Loader from 'react-loaders';
 
 const Home = () => {
     const[letterClass, setLetterClass] = useState('text-animate')
-    const nameArray = ['o', 'y', ' ', 'J', 'h', 'o', 'n',' ', 'A', 'n','d', 'e', 'r','s', 'o', 'n']
+    const nameArray = ['o', 'y', ' ', 'J', 'h', 'o', 'n', ' ']
+    const surnameArray = ['A', 'n', 'd', 'e', 'r', 's', 'o', 'n']
     const jobArray = ['D', 'e', 's', 'a', 'r', 'o', 'l', 'l', 'a', 'd', 'o', 'r', ' ', 'W', 'e', 'b']
 
     useEffect(() => {
@@ -35,6 +36,10 @@ const Home = () => {
                 <img src={LogoTitle} alt="developer"/>
                 <AnimatedLetters letterClass={letterClass} strArray={nameArray}
                 idx={15}/>
+                <span className="name-surname">
+                    <AnimatedLetters letterClass={letterClass} strArray={surnameArray}
+                    idx={23}/>
+                </span>
                 <br/>
                 <AnimatedLetters letterClass={letterClass} strArray={jobArray}
                 idx={20}/>

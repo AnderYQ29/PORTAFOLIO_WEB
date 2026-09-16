@@ -38,6 +38,58 @@
     animation-delay: 1s
 }
 
+@media (max-width: 768px) {
+    .page {
+        min-height: 100vh;
+        padding-bottom: 24px;
+    }
+
+    .container {
+        position: relative;
+        top: auto;
+        height: auto;
+        min-height: calc(100vh - 64px);
+        padding: 78px 24px 48px;
+    }
+
+    .page .home-page {
+        padding-top: 86px;
+    }
+
+    .page .about-page,
+    .page .contact-page {
+        padding-top: 112px;
+    }
+
+    .tags {
+        display: none;
+    }
+
+    .page .about-page,
+    .page .contact-page {
+        .text-zone {
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: none;
+            width: 100%;
+            max-height: none;
+        }
+
+        .text-zone h1 {
+            font-size: clamp(38px, 11vw, 48px);
+            margin-bottom: 32px;
+            left: 0;
+        }
+
+        .text-zone p {
+            min-width: 0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
+}
+
 .about-page,
 .contact-page {
     .text-zone{

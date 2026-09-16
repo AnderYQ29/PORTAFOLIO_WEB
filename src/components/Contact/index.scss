@@ -115,5 +115,14 @@
             width: 100%;
             text-align: center;
         }
+
+        input[type='text'],
+        input[type='email'] {
+            height: 54px;
+        }
+
+        textarea {
+            min-height: 150px;
+        }
     }
 }

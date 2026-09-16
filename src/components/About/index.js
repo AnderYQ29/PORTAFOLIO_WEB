@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import Loader from 'react-loaders'
@@ -12,29 +13,28 @@ const About = () => {
 
     const projects = [
         {
-            title: 'Portafolio Profesional',
-            description: 'Presentacion de mis habilidades y proyectos frontend.',
-            url: 'https://tu-sitio-ejemplo.com/proyecto1'
+            title: 'Tambito / E-commerce',
+            description: 'Aplicación web para clientes que permite explorar productos, agregar al carrito, realizar compras y gestionar su perfil y direcciones. Con un diseño responsivo y una experiencia enfocada en la usabilidad, esta solución combina React y Java Spring Boot para ofrecer una compra moderna y eficiente.',
+            tecnologia: 'React, Java Spring Boot, API REST, MySQL, UX/UI, Responsive Design',
+            url: 'https://systemstoresf.onrender.com/'
         },
         {
-            title: 'E-commerce React',
-            description: 'Tienda con carrito y filtros de productos.',
-            url: 'https://tu-sitio-ejemplo.com/proyecto2'
+            title: 'Tarjeta Profesional Interactiva',
+            description: 'Tarjeta profesional responsiva con diseño moderno. Presenta mis habilidades en React, API RestFul, JavaScript y UI/UX, con enlaces a mis perfiles de GitHub, LinkedIn e Instagram. Incluye animaciones CSS y es totalmente adaptable a dispositivos móviles.',
+            tecnologia: 'HTML5, CSS3, Diseño Responsivo, Animaciones CSS',
+            url: 'https://professional-card-main.vercel.app'
         },
         {
-            title: 'Landing UI/UX',
-            description: 'Pantalla responsiva diseñada para conversiones.',
-            url: 'https://tu-sitio-ejemplo.com/proyecto3'
+            title: 'Happy Store / E-commerce',
+            description: 'Aplicación web de comercio electrónico que permite explorar un catálogo de productos, aplicar filtros, consultar detalles, agregar artículos al carrito y completar el proceso de compra. Desarrollada con una interfaz responsiva y enfocada en ofrecer una experiencia de usuario clara y sencilla',
+            tecnologia: 'React 19, Vite, React Router, Zustand, Sass, Fake Store API, Responsive Design',
+            url: 'https://happy-store-tawny.vercel.app'
         },
         {
-            title: 'Dashboard Interactivo',
-            description: 'Visualizacion de datos con componentes React.',
+            title: 'Portafolio Web Personal',
+            description: 'Aplicación desarrollada con React que presenta mi perfil como desarrollador Frontend Junior y diseñador UX/UI. Incluye secciones de inicio, información personal, habilidades, proyectos destacados y contacto, con navegación dinámica, animaciones y un diseño responsivo adaptado a distintos dispositivos.',
+            tecnologia: 'React, JavaScript, Sass, React Router, Font Awesome, Animate.css y EmailJS.',
             url: 'https://tu-sitio-ejemplo.com/proyecto4'
-        },
-        {
-            title: 'Blog con API',
-            description: 'Publicaciones dinamicas consumiendo una API REST.',
-            url: 'https://tu-sitio-ejemplo.com/proyecto5'
         }
     ]
 //...
@@ -101,7 +101,8 @@ const About = () => {
                         </div>
                     </div>
 
-                    {showModal && (
+                    {showModal && createPortal(
+                        (
                         <div className='projects-modal'>
                             <div className='modal-overlay' onClick={() => setShowModal(false)} />
                             <div className='modal-container'>
@@ -122,6 +123,7 @@ const About = () => {
                                         >
                                             <h3>{project.title}</h3>
                                             <p>{project.description}</p>
+                                            <p>Tecnologias utilizadas: {project.tecnologia}</p>
                                             <span>Ver proyecto</span>
                                         </a>
                                     ))}
@@ -129,6 +131,8 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
+                        ),
+                        document.body
                     )}
 
                     
