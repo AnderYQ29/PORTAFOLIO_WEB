@@ -34,7 +34,7 @@ const About = () => {
             title: 'Portafolio Web Personal',
             description: 'Aplicación desarrollada con React que presenta mi perfil como desarrollador Frontend Junior y diseñador UX/UI. Incluye secciones de inicio, información personal, habilidades, proyectos destacados y contacto, con navegación dinámica, animaciones y un diseño responsivo adaptado a distintos dispositivos.',
             tecnologia: 'React, JavaScript, Sass, React Router, Font Awesome, Animate.css y EmailJS.',
-            url: 'https://tu-sitio-ejemplo.com/proyecto4'
+            url: 'https://portafolio-web-w9o3.vercel.app'
         }
     ]
 //...
